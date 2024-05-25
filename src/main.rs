@@ -71,7 +71,7 @@ fn setup_game(
     commands.spawn((
         SpriteBundle {
             transform: Transform {
-                translation: Vec3::new(0.0, 0.0, 0.0),
+                translation: Vec3::new(0.0, -250.0, 0.0),
                 scale: PADDLE_SIZE,
                 ..default()
             },
@@ -91,7 +91,7 @@ fn setup_game(
             mesh: meshes.add(Circle::default()).into(),
             material: materials.add(ColorMaterial::from(PROJECTILE_COLOR)),
             transform: Transform::from_translation(PROJECTILE_STARTING_POSITION)
-                .with_scale(PROJECTILE_SIZE * Vec3::new(2.0, 2.0, 2.0)),
+                .with_scale(PROJECTILE_SIZE * Vec3::new(4.0, 4.0, 4.0)),
             ..default()
         },
         Enemy,
